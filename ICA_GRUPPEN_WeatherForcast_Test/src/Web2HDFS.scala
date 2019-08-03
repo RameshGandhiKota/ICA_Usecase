@@ -3,6 +3,26 @@ import org.apache.spark._
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 
+  case class recordStructure(year:Int, month: Int, day: Int, mrng: Float, aftn: Float, evng: Float, tmax: Float, tmin: Float, tavg: Float)
+  
+  object recStructure{
+    
+    def apply(rec:Array[String]):recordStructrue = {
+      //  val data = rec.map( x=> x.split(" ").filter( _ != ""))
+      val yr = if( rec.length > 0 ) rec(0) else null
+      val mn = if( rec.length > 1 ) rec(1) else null
+      val dy = if( rec.length > 2 ) rec(2) else null
+      val mg = if( rec.length > 3 ) rec(3) else null
+      val at = if( rec.length > 4 ) rec(4) else null
+      val eg = if( rec.length > 5 ) rec(5) else null
+      val mi = if( rec.length > 6 ) rec(6) else null
+      val mx = if( rec.length > 7 ) rec(7) else null
+      val ag = if( rec.length > 8 ) rec(8) else null
+      
+      recordStructure(yr,mn,dy,mg,at,eg,mi,mx,ag)
+    }
+    
+  }
 
 object Web2HDFS {
   //extends App{
