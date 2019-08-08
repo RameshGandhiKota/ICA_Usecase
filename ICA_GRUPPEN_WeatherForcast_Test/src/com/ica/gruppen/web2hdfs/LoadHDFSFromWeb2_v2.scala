@@ -29,7 +29,8 @@ object LoadHDFSFromWeb2_v2 {
 
     //val filePath = "/tmp/temp/data/stockholmA_barometer_2013_2017.txt"
     //val tblName = filePath.substring(filePath.lastIndexOf('/') + 1).replaceAll(".txt", "")
-    loadFileGenericFunc(filePath, tblName, fileSetNum.toInt, loadType)
+    //loadFileGenericFunc(filePath, tblName, fileSetNum.toInt, loadType)
+    loadFileGenericFuncV2(filePath, tblName, fileSetNum.toInt, loadType)
 
     // End of main block
   }

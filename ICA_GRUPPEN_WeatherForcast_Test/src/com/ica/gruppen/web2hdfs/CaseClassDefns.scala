@@ -10,4 +10,9 @@ object CaseClassDefns {
   case class Parse2Data12(year: Int, month: Int, day: Int, b_mrng: Float, t_mrng: Float, a_mrng: Float, b_aftn: Float, t_aftn: Float, a_aftn: Float, b_evng: Float, t_evng: Float, a_evng: Float)
   case class Parse2Data6(year: Int, month: Int, day: Int, a_mrng: Float, a_aftn: Float, a_evng: Float)
 
+  trait ParseData1
+  case class ParseData6(year: Int, month: Int, day: Int, mrng: Float, aftn: Float, evng: Float) extends ParseData1
+  case class ParseData8(year: Int, month: Int, day: Int, mrng: Float, aftn: Float, evng: Float, tmax: Float, tmin: Float) extends ParseData1
+  case class ParseData9(year: Int, month: Int, day: Int, mrng: Float, aftn: Float, evng: Float, tmax: Float, tmin: Float, tmean: Float) extends ParseData1
+
 }
